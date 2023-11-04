@@ -1,7 +1,10 @@
+
 var path,boy,cash,diamonds,jwellery,sword;
 var pathImg,boyImg,cashImg,diamondsImg,jwelleryImg,swordImg;
 var treasureCollection = 0;
 var cashG,diamondsG,jwelleryG,swordGroup;
+
+var gover
 
 //Estados do jogo
 var PLAY=1;
@@ -22,7 +25,7 @@ function preload(){
   
   //gameOver.png=Load();
   
-  //gover = loadImage("gameOver.png");
+  // gover = loadImage("gameOver.png");
 }
 
 function setup(){
@@ -45,6 +48,8 @@ cashG=new Group();
 diamondsG=new Group();
 jwelleryG=new Group();
 swordGroup=new Group();
+
+
 
 }
 
@@ -95,9 +100,9 @@ function draw() {
         swordGroup.setVelocityYEach(0);
         //Remova os comentários corretos da linha de código para exibir 'game over' (fim de jogo)
 
-        //  over = createSprite(880,9980,20,20);
-        //  over.addAnimation("gameover",gover);
-        //  over.scale=0.7
+        gameover = createSprite(180,280,20,20);
+        gameover.addImage("gameover", gover);
+        gameover.scale=0.7
 
         //  over = createSprite(180,280,20,20);
         //  over.addAnimation("gameover",gover);
@@ -161,3 +166,4 @@ function createSword(){
   swordGroup.add(sword);
   }
 }
+
